@@ -12,12 +12,6 @@ Created on Tue Nov 14 12:40:44 2023
 import streamlit as st
 from PIL import Image
 
-##################################################################################################
-###Path toevoegen.
-##################################################################################################
-
-path = 'C:/Users/bartd/OneDrive/Bureaublad/Data Science (Minor)/Documentatie/'
-
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 ##################################################################################################
@@ -94,7 +88,7 @@ if optie == 'Opdrachtinformatie':
                     st.write('**Telefoon:** +31 6 80159992')        
                     st.write('**E-mail  :** akin.akinola@hva.nl')
         with col2:
-            image = Image.open(f'{path}akinakinola.jpg')
+            image = Image.open(f'akinakinola.jpg')
             st.image(image, width = 200)
         st.divider()
 
@@ -113,7 +107,7 @@ if optie == 'Opdrachtinformatie':
                 st.write('**Telefoon:** +31 6 26165574')        
                 st.write('**E-mail  :** boet.rijnders@hva.nl')
         with col4:
-            image = Image.open(f'{path}boetrijnders.png')
+            image = Image.open(f'boetrijnders.png')
             st.image(image, width = 200)
         st.divider()
 
@@ -132,7 +126,7 @@ if optie == 'Opdrachtinformatie':
                 st.write('**Telefoon:** +31 6 39131273')        
                 st.write('**E-mail  :** bart.de.beus@hva.nl')
         with col6:
-            image = Image.open(f'{path}bartdebeus.jpeg')
+            image = Image.open(f'bartdebeus.jpeg')
             st.image(image, width = 200)
         st.divider()
         
@@ -171,7 +165,7 @@ if optie == 'Opdrachtinformatie':
         with col8:
             st.write('')
             st.write('')
-            image = Image.open(f'{path}vandereng.png')
+            image = Image.open(f'vandereng.png')
             st.image(image, width = 200)
             
     with tab_techport:
@@ -182,7 +176,7 @@ if optie == 'Opdrachtinformatie':
         with col10:
             st.write('')
             st.write('')
-            image = Image.open(f'{path}techport.png')
+            image = Image.open(f'techport.png')
             st.image(image, width = 200)
             
         
@@ -237,13 +231,13 @@ if optie == 'Tijdlijn':
                  ''')
     col17_1, col17_2, col17_3 = st.columns((0.3, 0.3, 0.3))
     with col17_1:
-        image = Image.open(f'{path}17nov_1.jpeg')
+        image = Image.open(f'17nov_1.jpeg')
         st.image(image, caption='Van der Eng in Heemskerk', width = 400)         
     with col17_2:
-        image = Image.open(f'{path}17nov_2.jpeg')
+        image = Image.open(f'17nov_2.jpeg')
         st.image(image, caption='Werkbank waarop de orders worden verwerkt', width = 400)           
     with col17_3:
-        image = Image.open(f'{path}17nov_3.jpeg')
+        image = Image.open(f'17nov_3.jpeg')
         st.image(image, caption='Sensor geplaatst door het vorige groepje', width = 400)    
 
 
