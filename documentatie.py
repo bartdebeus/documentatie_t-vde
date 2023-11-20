@@ -64,7 +64,7 @@ if optie == 'Opdrachtinformatie':
     
     text_boet = '''
     Ik ben Boet, 23 jaar en kom uit Amstelveen. Drie jaar geleden is de wereld van data voor mij geopend toen begon bij 
-    SOCIALDATABASE.com, dit is ook de rede waarom ik heb gekozen voor de minor data science. Data science is een opwindend 
+    SOCIALDATABASE.com, dit is ook de reden waarom ik heb gekozen voor de minor data science. Data science is een opwindend 
     en snelgroeiend veld dat veel kansen biedt naast de wereld van data hou ik ook van sporten en interessante dingen doen 
     met mijn vrienden.
     '''
@@ -76,7 +76,7 @@ if optie == 'Opdrachtinformatie':
     leergierige en gemotiveerde student, die analytisch en kritisch is ingesteld.  
     
     Buiten de Hogeschool om ben ik vaak te vinden in Haarlem of Zandvoort, op het voetbalveld of bij de tennis of padel. Ook ben ik de 
-    trainer van de jo16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week training aan geef.  
+    trainer van de jo16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week sta.  
     '''
     
     with tab_akin:
