@@ -12,6 +12,12 @@ Created on Tue Nov 14 12:40:44 2023
 import streamlit as st
 from PIL import Image
 
+##################################################################################################
+###Path toevoegen.
+##################################################################################################
+
+path = 'C:/Users/bartd/OneDrive/Bureaublad/Data Science (Minor)/Documentatie/'
+
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 ##################################################################################################
@@ -64,13 +70,13 @@ if optie == 'Opdrachtinformatie':
     '''
     
     text_bart = '''
-    Mijn naam is Bart de Beus, en ik ben een 20-jarige Toegepaste Wiskunde student aan de Hogeschool van Amsterdam. 
-    Ik heb altijd een passie gehad voor puzzelen, wat ook de reden is dat ik bij Wiskunde terecht ben gekomen. Eigenlijk 
-    zijn de wiskundige formules voor mij een net iets andere manier van lastig puzzelen. Daarbij ben ik ook een erg 
+    Mijn naam is Bart de Beus, en ik ben een 20-jarige student uit Bennebroek. Ik studeer Toegepaste Wiskunde aan de Hogeschool 
+    van Amsterdam. Ik heb altijd een passie gehad voor puzzelen, wat ook de reden is dat ik bij Wiskunde terecht ben gekomen. Eigenlijk 
+    zijn de wiskundige formules voor mij een net iets andere manier van uitdagende puzzels. Daarbij ben ik ook een erg 
     leergierige en gemotiveerde student, die analytisch en kritisch is ingesteld.  
     
-    Buiten de Hogeschool om ben ik vaak te vinden in Haarlem, op het voetbalveld of bij de tennis of padel. Ook ben ik de 
-    coach van de jo16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week training aan geef.  
+    Buiten de Hogeschool om ben ik vaak te vinden in Haarlem of Zandvoort, op het voetbalveld of bij de tennis of padel. Ook ben ik de 
+    trainer van de jo16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week training aan geef.  
     '''
     
     with tab_akin:
@@ -138,7 +144,8 @@ if optie == 'Opdrachtinformatie':
              
     tab_vandereng, tab_techport = st.tabs(['Van der Eng', 'Techport'])
              
-    text_vandereng = '''Van der Eng is een ambachtelijke, maar uiterst innovatieve en moderne organisatie. Inmiddels
+    text_vandereng = '''[Van der Eng](https://vandereng.nl/)
+    is een ambachtelijke, maar uiterst innovatieve en moderne organisatie. Inmiddels
     heeft het bedrijf ruim 120-jaar ervaring in het ontwikkelen en produceren van hoogwardige labels en etiketten. 
     Hun producten worden wereldwijd ingezet voor de identificatie van producten, processen en personen in een breed aantal
     branches.
@@ -146,9 +153,9 @@ if optie == 'Opdrachtinformatie':
     text_vandereng2 = '''Onze contactpersoon bij Van der Eng is Hamza Arrahmani, hoofd financiële administratie 
     bij Van der Eng. Tevens heeft hij ook aan de Hogeschool van Amsterdam gestudeerd. De directeur van het bedrijf 
     is Ernst de Haas. 
-    '''
-             
-    text_techport = '''Techport is dé publiek-private samenwerking van meer dan 90 bedrijven, scholen en overheden met als 
+    '''     
+    
+    text_techport = '''[Techport](https://techport.nl/) is dé publiek-private samenwerking van meer dan 90 bedrijven, scholen en overheden met als 
     doel de eerste groene industriezone van Nederland te worden. Ze zijn actief in de IJmond, een dynamische regio waarin 
     de industrie voor grote opgave staat om te verduurzamen. Techport stimuleert zij-instroom, versnelt technologische innovatie 
     en ontwikkelt regionaal opleidingsaanbod voor de banen van toekomst.
@@ -185,8 +192,10 @@ if optie == 'Opdrachtinformatie':
 ################################################################################################## 
     
 if optie == 'Tijdlijn':
+    st.markdown("<h1 style='text-align: center;'>Tijdlijn</h1>", unsafe_allow_html = True)
+    st.divider()
     
-    st.subheader('**Week 1:**')
+    st.markdown("<h3 style='text-align: center;'>Week 1</h3>", unsafe_allow_html = True)   
     
     col13a, col13b = st.columns((0.2, 1.5))
     with col13a:
@@ -232,17 +241,17 @@ if optie == 'Tijdlijn':
     col17_1, col17_2, col17_3 = st.columns((0.3, 0.3, 0.3))
     with col17_1:
         image = Image.open(f'17nov_1.jpeg')
-        st.image(image, caption='Van der Eng in Heemskerk', width = 400)         
+        st.image(image, caption='Van der Eng in Heemskerk', width = 350)         
     with col17_2:
         image = Image.open(f'17nov_2.jpeg')
-        st.image(image, caption='Werkbank waarop de orders worden verwerkt', width = 400)           
+        st.image(image, caption='Werkbank waarop de orders worden verwerkt', width = 350)           
     with col17_3:
         image = Image.open(f'17nov_3.jpeg')
-        st.image(image, caption='Sensor geplaatst door het vorige groepje', width = 400)    
+        st.image(image, caption='Sensor geplaatst door het vorige groepje', width = 350)    
 
 
     st.divider()
-    st.subheader('**Week 2:**')
+    st.markdown("<h3 style='text-align: center;'>Week 2</h3>", unsafe_allow_html = True)   
 
     col21a, col21b = st.columns((0.2, 1.5)) 
     with col21a:
@@ -263,8 +272,8 @@ if optie == 'Tijdlijn':
 ##################################################################################################         
         
 if optie == 'Plan van Aanpak':
-    st.subheader('Plan van Aanpak')     
-    st.write('**Het Plan van Aanpak wordt later in week 2 verwacht...**')
+    st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
+    st.write('**Het Plan van Aanpak is nog in ontwikkeling, en wordt later in week 2 verwacht...**')
         
         
         
