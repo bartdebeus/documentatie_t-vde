@@ -49,11 +49,11 @@ if optie == 'Opdrachtinformatie':
 ##################################################################################################
 
     st.subheader('Ons team:')
-    tab_akin, tab_boet, tab_bart = st.tabs(['Akin Akinola', 'Boet Rijnders', 'Bart de Beus'])
+    tab_akin, tab_bart, tab_boet = st.tabs(['Akin Akinola', 'Bart de Beus', 'Boet Rijnders'])
     
     text_akin = '''
     Ik ben Akin Akinola en volg de studie Commerciële Economie aan de Hogeschool van Amsterdam. Marketing is iets dat 
-    altijd mij interesse heeft gehad. Het creëren van posters, slogans en merk-logo’s zijn voor mij leuke bezigheden om mijn 
+    altijd mijn interesse heeft gehad. Het creëren van posters, slogans en merk-logo’s zijn voor mij leuke bezigheden om mijn 
     creativiteit te uiten. In combinatie met mijn fashion interesse heb ik al sinds jong een passie voor kleding en daarbij 
     ook het creëren van complete looks. Dit kan voor personen zijn maar ook als visual merchandise van bedrijven/winkels.
     
@@ -63,9 +63,9 @@ if optie == 'Opdrachtinformatie':
     '''
     
     text_boet = '''
-    Ik ben Boet, 23 jaar en kom uit Amstelveen. Drie jaar geleden is de wereld van data voor mij geopend toen begon bij 
-    SOCIALDATABASE.com, dit is ook de reden waarom ik heb gekozen voor de minor data science. Data science is een opwindend 
-    en snelgroeiend veld dat veel kansen biedt naast de wereld van data hou ik ook van sporten en interessante dingen doen 
+    Ik ben Boet, 23 jaar en kom uit Amstelveen. Drie jaar geleden is de wereld van data voor mij geopend toen ik begon bij 
+    SOCIALDATABASE.com. Dit is ook de reden waarom ik heb gekozen voor de minor Data Science. Data Dcience is een opwindend 
+    en snelgroeiend veld dat veel kansen biedt. Naast de wereld  van data hou ik ook van sporten en leuke dingen doen 
     met mijn vrienden.
     '''
     
@@ -76,7 +76,7 @@ if optie == 'Opdrachtinformatie':
     leergierige en gemotiveerde student, die analytisch en kritisch is ingesteld.  
     
     Buiten de Hogeschool om ben ik vaak te vinden in Haarlem of Zandvoort, op het voetbalveld of bij de tennis of padel. Ook ben ik de 
-    trainer van de jo16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week sta.  
+    trainer van de jongens onder 16-1 van mijn lokale voetbalclub, waar ik ook twee keer per week sta.  
     '''
     
     with tab_akin:
@@ -142,11 +142,11 @@ if optie == 'Opdrachtinformatie':
     
     st.subheader('Over de opdrachtgever:')
              
-    tab_vandereng, tab_techport = st.tabs(['Van der Eng', 'Techport'])
+    tab_techport, tab_vandereng = st.tabs(['Techport', 'Van der Eng'])
              
     text_vandereng = '''[Van der Eng](https://vandereng.nl/)
     is een ambachtelijke, maar uiterst innovatieve en moderne organisatie. Inmiddels
-    heeft het bedrijf ruim 120-jaar ervaring in het ontwikkelen en produceren van hoogwardige labels en etiketten. 
+    heeft het bedrijf ruim 120 jaar ervaring in het ontwikkelen en produceren van hoogwardige labels en etiketten. 
     Hun producten worden wereldwijd ingezet voor de identificatie van producten, processen en personen in een breed aantal
     branches.
     '''
