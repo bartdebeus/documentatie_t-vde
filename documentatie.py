@@ -282,6 +282,11 @@ if optie == 'Tijdlijn':
 if optie == 'Plan van Aanpak':
     st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
     st.write('**Het Plan van Aanpak is nog in ontwikkeling, en wordt later in week 2 verwacht...**')
+    
+    st.divider()
+    st.subheader('Key Factoren:')
+    image = Image.open(f'KeyFactoren.png')
+    st.image(image, caption='De belangrijkste factoren binnen het project.')      
         
         
         
