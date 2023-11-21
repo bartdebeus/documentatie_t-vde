@@ -25,7 +25,7 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 ##################################################################################################
 
 st.sidebar.subheader('**Opties**')
-optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Key Actoren', 'Tijdlijn', 'Plan van Aanpak'))
+optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak'))
 
 st.sidebar.subheader('**Referenties**')
 st.sidebar.write('LinkedIn. (z.d.). [Logo van LinkedIn]. Geraadpleegd op 18 november 2023, van https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg')
@@ -38,7 +38,7 @@ st.sidebar.write('Autisme Expertise. (14 februari 2019). [Foto geen profielfoto]
 ###Wat is de opdracht.
 ##################################################################################################
 
-if optie == 'Key Actoren':
+if optie == 'Algemene Informatie':
     
     st.title('Case Van der Eng // Techport')
     st.write('''
