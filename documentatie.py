@@ -273,7 +273,7 @@ if optie == 'Tijdlijn':
                      tips en aanraders zijn ook genoemd.
                      ''')
         with col21b_2:
-            image1 = Image.open(f'{path}21nov_1.jpeg')
+            image1 = Image.open(f'21nov_1.jpeg')
             st.image(image1, caption = 'Gesprek met Daan van der Hoek op de HvA')
         
 ##################################################################################################
