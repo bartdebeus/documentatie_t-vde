@@ -265,15 +265,16 @@ if optie == 'Tijdlijn':
     with col21a:
         st.write('**21 november:**')
     with col21b:
-        st.write('''**Gepland** Het gesprek met Daan van der Hoek.
-                 ''')
-
-    col24a, col24b = st.columns((0.2, 1.5)) 
-    with col21a:
-        st.write('**24 november:**')
-    with col21b:
-        st.write('''**Gepland** Het consult met Andre Gerver.
-                 ''')        
+        col21b_1, col21b_2 = st.columns((1, 0.3))
+        with col21b_1:
+            st.write('''Er is gesproken met Daan van der Hoek. Hierbij is aan het woord gekomen wat er eventueel verbeterd zou kunnen worden aan
+                     de sensor (bijvoorbeeld vergroting van gaten) en waar nog meer naar gekeken kan worden. Ook is er besproken wat er volgens 
+                     hun nog met de data gedaan kan worden. Ook is het algemene proces besproken en hoe wij de sensor zouden kunnen maken. Eventuele
+                     tips en aanraders zijn ook genoemd.
+                     ''')
+        with col21b_2:
+            image1 = Image.open(f'{path}21nov_1.jpeg')
+            st.image(image1, caption = 'Gesprek met Daan van der Hoek op de HvA')
         
 ##################################################################################################
 ###Plan van Aanpak:
