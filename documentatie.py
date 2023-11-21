@@ -24,7 +24,14 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 ###Sidebar met kiezen week.
 ##################################################################################################
 
+st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Opdrachtinformatie', 'Tijdlijn', 'Plan van Aanpak'))
+
+st.sidebar.subheader('**Referenties**')
+st.sidebar.write('LinkedIn. (z.d.). [Logo van LinkedIn]. Geraadpleegd op 18 november 2023, van https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg')
+st.sidebar.write('smartindustry. (z.d.). [Logo van Techport]. Geraadpleegd op 18 november 2023, van https://smartindustry.nl/fieldlab/fieldlab-smart-maintenance-techport')
+st.sidebar.write('VanderEng B.V.. (z.d.). [Logo van Van der Eng]. Geraadpleegd op 18 november 2023, van https://vandereng.nl/')
+st.sidebar.write('Autisme Expertise. (14 februari 2019). [Foto geen profielfoto]. Geraadpleegd op 19 november 2023, van https://www.autismeexpertise.nl/index.php/wie-zijn-wij/profielfoto/')
 
 
 ##################################################################################################
