@@ -286,7 +286,7 @@ if optie == 'Plan van Aanpak':
     st.divider()
     st.subheader('Key Factoren:')
     image = Image.open(f'KeyFactoren.png')
-    st.image(image, caption='De belangrijkste factoren binnen het project.')      
+    st.image(image, caption='De belangrijkste factoren binnen het project.', width = 500)      
         
         
         
