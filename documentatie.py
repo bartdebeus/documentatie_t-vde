@@ -18,7 +18,7 @@ from PIL import Image
 
 path = 'C:/Users/bartd/OneDrive/Bureaublad/Data Science (Minor)/Documentatie/'
 
-st.set_page_config(layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title = 'Documentatie', page_icon = "wrench")
 
 ##################################################################################################
 ###Sidebar met kiezen week.
