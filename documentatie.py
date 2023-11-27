@@ -21,7 +21,7 @@ path = 'C:/Users/bartd/OneDrive/Bureaublad/Data Science (Minor)/Documentatie/'
 st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title = 'Documentatie', page_icon = "wrench")
 
 ##################################################################################################
-###Sidebar met kiezen week.
+###Sidebar met kiezen documentatie.
 ##################################################################################################
 
 st.sidebar.subheader('**Opties**')
@@ -33,6 +33,7 @@ if optie == 'Referenties':
     st.write('smartindustry. (z.d.). [Logo van Techport]. Geraadpleegd op 18 november 2023, van https://smartindustry.nl/fieldlab/fieldlab-smart-maintenance-techport')
     st.write('VanderEng B.V.. (z.d.). [Logo van Van der Eng]. Geraadpleegd op 18 november 2023, van https://vandereng.nl/')
     st.write('Autisme Expertise. (14 februari 2019). [Foto geen profielfoto]. Geraadpleegd op 19 november 2023, van https://www.autismeexpertise.nl/index.php/wie-zijn-wij/profielfoto/')
+
 
 
 ##################################################################################################
@@ -72,7 +73,7 @@ if optie == 'Algemene Informatie':
     
     text_boet = '''
     Ik ben Boet, 23 jaar en kom uit Amstelveen. Drie jaar geleden is de wereld van data voor mij geopend toen ik begon bij 
-    SOCIALDATABASE.com. Dit is ook de reden waarom ik heb gekozen voor de minor Data Science. Data Science is een opwindend 
+    SOCIALDATABASE.com. Dit is ook de reden waarom ik heb gekozen voor de minor Data Science. Data Dcience is een opwindend 
     en snelgroeiend veld dat veel kansen biedt. Naast de wereld  van data hou ik ook van sporten en leuke dingen doen 
     met mijn vrienden.
     '''
@@ -275,20 +276,54 @@ if optie == 'Tijdlijn':
         with col21b_2:
             image1 = Image.open(f'21nov_1.jpeg')
             st.image(image1, caption = 'Gesprek met Daan van der Hoek op de HvA')
-        
+    
+    col23a, col23b = st.columns((0.2, 1.5))
+    with col23a:
+        st.write('**23 november:**')
+    with col23b:
+        st.write('''Op deze dag is de conceptversie van het Plan van Aanpak afgerond. Deze is ingeleverd in de digitale omgeving van de Hogeschool, 
+                 en op dinsdag 28 november wordt de feedback verwacht, waarmee de definitieve versie van het Plan van Aanpak afgerond kan worden.
+                 ''')
+                 
+    col24a, col24b = st.columns((0.2, 1.5))
+    with col24a:
+        st.write('**24 november:**')
+    with col24b:
+        col24b_1, col24b_2 = st.columns((1, 0.3))
+        with col24b_1:
+            st.write('''We zijn weer langsgegaan bij Van der Eng in Heemskerk. Daar was de planning om metingen te doen en deze te vergelijken met de
+                     data in de server. Echter is er gemerkt dat er maar hele beperkte data in de server staat, namelijk voor 22 en 29 juni 2023. Dit 
+                     waren de dagen dat het vorige groepje de sensor heeft getest. Het kan zijn dat het ergens anders binnen de server is opgeslagen,
+                     of dat er een fout is in de code. Hiervoor is er contact opgenomen met Daan van der Hoek, en hij heeft ons doorverwezen naar 
+                     Alaric de Ruijter. 
+                     ''')
+        with col24b_2:
+            video_file = open('24nov_1.mp4', 'rb')
+            video_bytes = video_file.read()
+            st.video(video_bytes, start_time = 0)
+        with col24b:
+            st.write('''Ook is er gesproken met Andre Gerver via Microsoft Teams. Hierin hebben wij onszelf opnieuw voorgesteld, alleen nu met ons gezicht
+                     er ook bij. Hij heeft ons meerdere handige tips gegeven voor gedurende het proces. De dag van de wekelijkse consult is gewijzigd van
+                     vrijdag naar maandag. Dit omdat dat beter uitkwam i.v.m. bedrijfsmeetings.
+                     ''')
+                     
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 3</h3>", unsafe_allow_html = True) 
+
 ##################################################################################################
 ###Plan van Aanpak:
 ##################################################################################################         
         
 if optie == 'Plan van Aanpak':
     st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
-    st.write('**Het Plan van Aanpak is nog in ontwikkeling, en wordt later in week 2 verwacht...**')
+    st.write('**Dit Plan van Aanpak is nog een conceptversie en moet nog verbeterd worden.**')
+    image2 = Image.open(f'PvA.png')
+    st.image(image2, width = 750)
     
     st.divider()
     st.subheader('Key Factoren:')
     image = Image.open(f'KeyFactoren.png')
-    st.image(image, caption='De belangrijkste factoren binnen het project.', width = 750)      
-        
+    st.image(image, caption='De belangrijkste factoren binnen het project.', width = 750)         
         
         
         
