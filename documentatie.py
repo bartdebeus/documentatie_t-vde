@@ -347,8 +347,8 @@ if optie == 'Tijdlijn':
         
 if optie == 'Plan van Aanpak':
     st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
-    pva1, pva2 = st.columns((0.5, 0.5))
     st.divider()
+    pva1, pva2 = st.columns((0.5, 0.5))
     with pva1:
         image2 = Image.open(f'PvA14.png')
         st.image(image2, width = 500)
