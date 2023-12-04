@@ -295,7 +295,7 @@ if optie == 'Tijdlijn':
                      data in de server. Echter is er gemerkt dat er maar hele beperkte data in de server staat, namelijk voor 22 en 29 juni 2023. Dit 
                      waren de dagen dat het vorige groepje de sensor heeft getest. Het kan zijn dat het ergens anders binnen de server is opgeslagen,
                      of dat er een fout is in de code. Hiervoor is er contact opgenomen met Daan van der Hoek, en hij heeft ons doorverwezen naar 
-                     Alaric de Ruijter. 
+                     Alaric de Ruiter. 
                      ''')
         with col24b_2:
             video_file = open('24nov_1.mp4', 'rb')
@@ -309,23 +309,97 @@ if optie == 'Tijdlijn':
                      
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Week 3</h3>", unsafe_allow_html = True) 
-
+    
+    
+    col27a, col27b = st.columns((0.2, 1.5))
+    with col27a:
+        st.write('**27 november:**')
+    with col27b:
+        st.write('''Er is contact gelegd met Alaric de Ruiter. Het niet doorverwijzen van de data kan liggen aan verschillende zaken, namelijk als eerste
+                 dat de bedrading tussen de verschillende componenten niet goed is blijven zitten. Om dit te checken kunnen we een script runnen binnen de 
+                 RaspberryPi, en als er data binnenkomt ligt het in ieder geval niet hieraan. De verbinding tussen de RaspberryPi en de server is ook niet heel stabiel, dus het is
+                 ook mogelijk dat er wel data binnenkomt en verzameld wordt, maar dat er simpelweg geen data wordt gestuurd naar de server.
+                 ''')
+    
+    col28a, col28b = st.columns((0.2, 1.5))
+    with col28a:
+        st.write('**28 november:**')
+    with col28b:
+        st.write('''Vanuit de Track Smart Industry was er een werkcollege, waarmee aan de slag is gegaan met een RaspberryPi. Hierbij is een SenseHat sensor
+                 gebruikt, die bijvoorbeeld de luchtvochtigheid en temperatuur kan meten. Er is afgesproken dat wij er een mee kunnen nemen, om mee te oefenen
+                 voor de sensor die bij Van der Eng staat. Daar zullen we verder in week 3 mee aan de slag gaan. 
+                 ''')
+    
+    col1a, col1b = st.columns((0.2, 1.5))
+    with col1a:
+        st.write('**1 december:**')
+    with col1b:
+        st.write('''Op 1 december moest het definitieve Plan van Aanpak ingeleverd worden. Voor het eindproduct, zie Plan van Aanpak.
+                 ''')
+    
+    
+    
+    
+    
 ##################################################################################################
 ###Plan van Aanpak:
 ##################################################################################################         
         
 if optie == 'Plan van Aanpak':
     st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
-    st.write('**Dit Plan van Aanpak is nog een conceptversie en moet nog verbeterd worden.**')
-    image2 = Image.open(f'PvA.png')
-    st.image(image2, width = 750)
-    
-    st.divider()
-    st.subheader('Key Factoren:')
-    image = Image.open(f'KeyFactoren.png')
-    st.image(image, caption='De belangrijkste factoren binnen het project.', width = 750)         
+    pva1, pva2 = st.columns((0.5, 0.5))
+    with pva1:
+        image2 = Image.open(f'PvA1.png')
+        st.image(image2, width = 500)
+        st.divider()
         
+        image2 = Image.open(f'PvA3.png')
+        st.image(image2, width = 500)
+        st.divider()
         
+        image2 = Image.open(f'PvA5.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA7.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA9.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA11.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA13.png')
+        st.image(image2, width = 500)
+ 
+    with pva2:
+        image2 = Image.open(f'PvA2.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA4.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA6.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA8.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA10.png')
+        st.image(image2, width = 500)
+        st.divider()
+        
+        image2 = Image.open(f'PvA12.png')
+        st.image(image2, width = 500)
+        st.divider()        
         
         
         
