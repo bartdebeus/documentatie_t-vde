@@ -46,11 +46,15 @@ if optie == 'Algemene Informatie':
     st.write('''
              Op 13 november 2023 begint het nieuwe blok van de minor Data Science aan de Hogeschool
              van Amsterdam. Daar komt ook een track en case bij kijken. Wij (Akin Akinola, Boet Rijnders
-                                                                             en Bart de Beus) zijn ingedeeld bij de track Smart Industry, en de case Van der Eng //
+             en Bart de Beus) zijn ingedeeld bij de track Smart Industry, en de case Van der Eng //
              Techport.\n
              In deze dashboard zullen we documentatie van het project bijhouden voor onze opdrachtgevers
              Andre Gerver en Hamza Arrahmani, en onze begeleider Jurjen Helmus. 
              ''')
+    st.divider()
+
+    st.subheader('Laatste update')
+    st.write('De laatste update van deze pagina is uitgevoerd op **6 december 2023** om 17:19:33')
     st.divider()
              
 ##################################################################################################
@@ -336,6 +340,48 @@ if optie == 'Tijdlijn':
     with col1b:
         st.write('''Op 1 december moest het definitieve Plan van Aanpak ingeleverd worden. Voor het eindproduct, zie Plan van Aanpak.
                  ''')
+
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 4</h3>", unsafe_allow_html = True) 
+
+    col4a, col4b = st.columns((0.2, 1.5))
+    with col4a:
+        st.write('**4 december:**')
+    with col4b:
+        st.write('''Op deze dag is met Roald Teunissen (van het Maintenance Lab) geregeld dat we een kleine monitor en een logitech 
+                 toetsenbord met geïntegreerde muis mogen lenen. Deze kunnen we gemakkelijk aansluiten met de RaspberryPi, zodat we niet het
+                 hele systeem hoeven los te breken.  
+                 ''')  
+        
+    col6a, col6b = st.columns((0.2, 1.5))
+    with col6a:
+        st.write('**6 december:**')
+    with col6b:
+        col6b_1, col6b_2 = st.columns((1, 0.3))
+        with col6b_1:
+            st.write('''Op de 6e zijn we weer langsgegaan in Heemskerk. Hier kwamen we met vernieuwde kennis van de geleende RaspberryPi en de materialen
+                     geleend vanuit het Maintenance Lab op de Hogeschool. Echter kwamen we er snel achter dat het ons niet lukte om het systeem in te komen, 
+                     aangezien de gebruikersnaam en het wachtwoord niet bekend waren bij zowel ons als intern bij Van der Eng. Daarom is er besloten om een nieuwe
+                     SD-kaart te halen, en hier opnieuw de (vernieuwde) software op te installeren met behulp van de gebruiksaanwijzingen. 
+                     ''')
+        with col6b_2:
+            image1 = Image.open(f'6dec_1.JPG')
+            st.image(image1, caption = 'De RaspberryPi losgehaald van de machine')  
+    with col6b:
+        st.write('''Helaas lukte het niet om dit goed te installeren vanaf de computer. Dit omdat er problemen waren met het SSH proces (waarmee de RaspberryPi wordt gelinkt met de laptop) 
+                waardoor er niks geüpload naar de RaspberryPi kon worden. Daarom is er toch besloten om de RaspberryPi zelf los te halen, maar de sensor te laten zitten. Deze is mee terug genomen naar een WiFi 
+                waarin het eerder wel is gelukt deze twee systemen te linken. Hier is alle (vernieuwde) software geüpload naar de RaspberryPi, en ook is 
+                de software veranderd van de Lite naar de normale versie. Er is besloten om op 7 december direct weer langs te gaan om de vernieuwde software
+                te testen bij Van der Eng. 
+                ''')
+        
+    col7deca, col7decb = st.columns((0.2, 1.5))
+    with col7deca:
+        st.write('**7 december:**')
+    with col7decb:
+        st.write('''**Op de planning.** Op 7 december is het de bedoeling om langs te gaan met het geüpdatet RaspberryPi systeem wat op 6 december gerealiseerd is.
+                 ''')
+  
     
     
     
@@ -346,7 +392,7 @@ if optie == 'Tijdlijn':
 ##################################################################################################         
         
 if optie == 'Plan van Aanpak':
-    st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)   
+    st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)  
     st.divider()
     pva1, pva2 = st.columns((0.5, 0.5))
     with pva1:
