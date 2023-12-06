@@ -24,8 +24,13 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title =
 ###Sidebar met kiezen documentatie.
 ##################################################################################################
 
+
+
 st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Referenties'))
+st.sidebar.divider()
+st.sidebar.subheader('Laatste update')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **6 december 2023** om 17:19:33')
 
 if optie == 'Referenties':
     st.subheader('**Referenties**')
@@ -51,10 +56,6 @@ if optie == 'Algemene Informatie':
              In deze dashboard zullen we documentatie van het project bijhouden voor onze opdrachtgevers
              Andre Gerver en Hamza Arrahmani, en onze begeleider Jurjen Helmus. 
              ''')
-    st.divider()
-
-    st.subheader('Laatste update')
-    st.write('De laatste update van deze pagina is uitgevoerd op **6 december 2023** om 17:19:33')
     st.divider()
              
 ##################################################################################################
