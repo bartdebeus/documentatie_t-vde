@@ -27,18 +27,41 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title =
 
 
 st.sidebar.subheader('**Opties**')
-optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Referenties'))
+optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **6 december 2023** om 17:19:33')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **11 december 2023** om 19:45:08')
 
-if optie == 'Referenties':
+if optie == 'Overig':
     st.subheader('**Referenties**')
     st.write('LinkedIn. (z.d.). [Logo van LinkedIn]. Geraadpleegd op 18 november 2023, van https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg')
     st.write('smartindustry. (z.d.). [Logo van Techport]. Geraadpleegd op 18 november 2023, van https://smartindustry.nl/fieldlab/fieldlab-smart-maintenance-techport')
     st.write('VanderEng B.V.. (z.d.). [Logo van Van der Eng]. Geraadpleegd op 18 november 2023, van https://vandereng.nl/')
     st.write('Autisme Expertise. (14 februari 2019). [Foto geen profielfoto]. Geraadpleegd op 19 november 2023, van https://www.autismeexpertise.nl/index.php/wie-zijn-wij/profielfoto/')
+    st.divider()
+    
+    st.subheader('**Terminologie**')
+    term1a, term1b = st.columns((0.2, 1.5))
+    with term1a:
+        st.write('**Meltzer:**')
+    with term1b: 
+        st.write('Een Meltzer is een apparaat dat bij Van der Eng staat om etiketten te produceren.')
+    
+    term2a, term2b = st.columns((0.2, 1.5))
+    with term2a:
+        st.write('**RaspberryPi:**')
+    with term2b:
+        st.write('''Een RaspberryPi is een minicomputer. Hierop kan ook een hdmi-kabel en muis en toetsenbord aangesloten worden. Deze staat bij Van der Eng
+                 om berekeningen uit te voeren, en alle data up te loaden naar het netwerk van Van der Eng. Voor meer info, zie https://www.raspberrypi.com/.
+                 ''')
 
+    term3a, term3b = st.columns((0.2, 1.5))
+    with term3a:
+        st.write('**Arduino:**')
+    with term3b:
+        st.write('''Een Arduino is een computer die het makkelijker maakt om met sensoren te werken. Deze is aangesloten op de sensor bij Van der Eng, en verbonden
+                 met een ethernet kabel op de RaspberryPi om daar de data naartoe te sturen. Voor meer info, zie https://www.arduino.cc/.
+                 ''')
 
 
 ##################################################################################################
@@ -49,12 +72,15 @@ if optie == 'Algemene Informatie':
     
     st.title('Case Van der Eng // Techport')
     st.write('''
-             Op 13 november 2023 begint het nieuwe blok van de minor Data Science aan de Hogeschool
+             Op 13 november 2023 begon het nieuwe blok van de minor Data Science aan de Hogeschool
              van Amsterdam. Daar komt ook een track en case bij kijken. Wij (Akin Akinola, Boet Rijnders
              en Bart de Beus) zijn ingedeeld bij de track Smart Industry, en de case Van der Eng //
              Techport.\n
              In deze dashboard zullen we documentatie van het project bijhouden voor onze opdrachtgevers
-             Andre Gerver en Hamza Arrahmani, en onze begeleider Jurjen Helmus. 
+             Andre Gerver en Hamza Arrahmani, en onze begeleider Jurjen Helmus. \n
+             De verschillende tabbladen met informatie zijn het Plan van Aanpak, met de opdrachtbeschrijving. 
+             Ook is er een tijdlijn met wat er redelijk per dag is gebeurd. Ook is er een overig tab. Hierin staan
+             zowel verschillende referenties als uitleg van bepaalde termen.
              ''')
     st.divider()
              
@@ -78,7 +104,7 @@ if optie == 'Algemene Informatie':
     
     text_boet = '''
     Ik ben Boet, 23 jaar en kom uit Amstelveen. Drie jaar geleden is de wereld van data voor mij geopend toen ik begon bij 
-    SOCIALDATABASE.com. Dit is ook de reden waarom ik heb gekozen voor de minor Data Science. Data Dcience is een opwindend 
+    SOCIALDATABASE.com. Dit is ook de reden waarom ik heb gekozen voor de minor Data Science. Data science is een opwindend 
     en snelgroeiend veld dat veel kansen biedt. Naast de wereld  van data hou ik ook van sporten en leuke dingen doen 
     met mijn vrienden.
     '''
@@ -164,7 +190,7 @@ if optie == 'Algemene Informatie':
     Hun producten worden wereldwijd ingezet voor de identificatie van producten, processen en personen in een breed aantal
     branches.
     '''
-    text_vandereng2 = '''Onze contactpersoon bij Van der Eng is Hamza Arrahmani, hoofd financiële administratie 
+    text_vandereng2 = '''Onze contactpersoon is Hamza Arrahmani, hoofd financiële administratie 
     bij Van der Eng. Tevens heeft hij ook aan de Hogeschool van Amsterdam gestudeerd. De directeur van het bedrijf 
     is Ernst de Haas. 
     '''     
@@ -366,7 +392,7 @@ if optie == 'Tijdlijn':
                      SD-kaart te halen, en hier opnieuw de (vernieuwde) software op te installeren met behulp van de gebruiksaanwijzingen. 
                      ''')
         with col6b_2:
-            image1 = Image.open(f'6dec_1.jpg')
+            image1 = Image.open(f'6dec_1.JPG')
             st.image(image1, caption = 'De RaspberryPi losgehaald van de machine')  
     with col6b:
         st.write('''Helaas lukte het niet om dit goed te installeren vanaf de computer. Dit omdat er problemen waren met het SSH proces (waarmee de RaspberryPi wordt gelinkt met de laptop) 
@@ -380,8 +406,29 @@ if optie == 'Tijdlijn':
     with col7deca:
         st.write('**7 december:**')
     with col7decb:
-        st.write('''**Op de planning.** Op 7 december is het de bedoeling om langs te gaan met het geüpdatet RaspberryPi systeem wat op 6 december gerealiseerd is.
+        st.write('''Het is gelukt om de RaspberryPi met de verniewde software aan te sluiten op het systeem. Deze is online gekregen, en is nu ook verbindbaar
+                 met de laptop. Er is met verschillende geüpdatet programma's geprobeerd de sensor weer aan de praat te krijgen. Dit is maar deels gelukt, de RaspberryPi kant
+                 van de sensor krijgen we namelijk wel degelijk metingen van (staat de sensor aan/uit), en het programma is nu ook runnend (aan) gekregen. Echter krijgen we van de sensor
+                 verbonden met de Arduino geen metingen binnen. Dit is niet werkbaar gekregen, en daarom is er ook besloten om de sensor van de Meltzer af te halen en mee
+                 te nemen naar Amsterdam voor evaluatie. 
                  ''')
+    
+    col11deca, col11decb = st.columns((0.2, 1.5))
+    with col11deca:
+        st.write('**11 december:**')
+    with col11decb:
+        col11decb_1, col11decb_2 = st.columns((1, 0.3))
+        with col11decb_1:
+            st.write('''De sensor (inclusief Arduino) is meegenomen naar Amsterdam. Hier is het gehele systeem veilig uit elkaar gehaald om te kijken of ieder geval de kabels nog
+                     aan elkaar zaten, aangezien dit het geval was zou de bedrading dus theoretisch gezien geen probleem moeten zijn. Daarom is er besloten om vooral eerst te focussen op de 
+                     software kant. Roald Teunissen heeft ons aangeraden het programma Arduino IDE te gebruiken voor de software van de Arduino, hiervoor is echter een ethernet connectie nodig,
+                     wat wij op de 11e niet konden realiseren. Daarom is dit uitgesteld naar 12 december. 's Middags hebben we ook ons wekelijks gesprek gehad met Andre Gerver. Die heeft ons ook 
+                     de goede kant op geduwd met een paar nuttige tips, zoals een andere systeem te gebruiken in combinatie met de Arduino (wat over het WiFi netwerk zou gaan i.p.v. ethernet).
+                    ''')
+        with col11decb_2:
+            image1 = Image.open(f'11dec_1.JPG')
+            st.image(image1, caption = 'Arduino met bedrading losgemaakt')  
+        
   
     
     
@@ -394,7 +441,12 @@ if optie == 'Tijdlijn':
         
 if optie == 'Plan van Aanpak':
     st.markdown("<h1 style='text-align: center;'>Plan van Aanpak</h1>", unsafe_allow_html = True)  
+    st.write('''Dit is de derde versie van het Plan van Aanpak. De eerste is verbeterd met behulp van feedback van medestudenten. Daarna is echter de opdracht
+             deels veranderd. Daarom is besloten om nog een keer feedback te vragen bij Inge Kilian (begeleider Business Analytics), en daaruit is de derde versie
+             gekomen.
+             ''')
     st.divider()
+
     pva1, pva2 = st.columns((0.5, 0.5))
     with pva1:
         image2 = Image.open(f'PvA14.png')
