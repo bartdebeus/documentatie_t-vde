@@ -392,7 +392,7 @@ if optie == 'Tijdlijn':
                      SD-kaart te halen, en hier opnieuw de (vernieuwde) software op te installeren met behulp van de gebruiksaanwijzingen. 
                      ''')
         with col6b_2:
-            image1 = Image.open(f'6dec_1.JPG')
+            image1 = Image.open(f'6dec_1.jpg')
             st.image(image1, caption = 'De RaspberryPi losgehaald van de machine')  
     with col6b:
         st.write('''Helaas lukte het niet om dit goed te installeren vanaf de computer. Dit omdat er problemen waren met het SSH proces (waarmee de RaspberryPi wordt gelinkt met de laptop) 
@@ -429,7 +429,7 @@ if optie == 'Tijdlijn':
                      de goede kant op geduwd met een paar nuttige tips, zoals een andere systeem te gebruiken in combinatie met de Arduino (wat over het WiFi netwerk zou gaan i.p.v. ethernet).
                     ''')
         with col11decb_2:
-            image1 = Image.open(f'11dec_1.JPG')
+            image1 = Image.open(f'11dec_1.jpg')
             st.image(image1, caption = 'Arduino met bedrading losgemaakt')  
     
     col12deca, col12decb = st.columns((0.2, 1.5))
