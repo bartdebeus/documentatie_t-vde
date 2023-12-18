@@ -30,7 +30,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **11 december 2023** om 19:45:08')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **18 december 2023** om 10:11:52')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -392,7 +392,7 @@ if optie == 'Tijdlijn':
                      SD-kaart te halen, en hier opnieuw de (vernieuwde) software op te installeren met behulp van de gebruiksaanwijzingen. 
                      ''')
         with col6b_2:
-            image1 = Image.open(f'6dec_1.jpg')
+            image1 = Image.open(f'6dec_1.JPG')
             st.image(image1, caption = 'De RaspberryPi losgehaald van de machine')  
     with col6b:
         st.write('''Helaas lukte het niet om dit goed te installeren vanaf de computer. Dit omdat er problemen waren met het SSH proces (waarmee de RaspberryPi wordt gelinkt met de laptop) 
@@ -413,6 +413,9 @@ if optie == 'Tijdlijn':
                  te nemen naar Amsterdam voor evaluatie. 
                  ''')
     
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 5</h3>", unsafe_allow_html = True) 
+
     col11deca, col11decb = st.columns((0.2, 1.5))
     with col11deca:
         st.write('**11 december:**')
@@ -426,8 +429,39 @@ if optie == 'Tijdlijn':
                      de goede kant op geduwd met een paar nuttige tips, zoals een andere systeem te gebruiken in combinatie met de Arduino (wat over het WiFi netwerk zou gaan i.p.v. ethernet).
                     ''')
         with col11decb_2:
-            image1 = Image.open(f'11dec_1.jpg')
+            image1 = Image.open(f'11dec_1.JPG')
             st.image(image1, caption = 'Arduino met bedrading losgemaakt')  
+    
+    col12deca, col12decb = st.columns((0.2, 1.5))
+    with col12deca:
+        st.write('**12 december:**')
+    with col12decb:
+        st.write('''Aangezien alle bedrading goed in elkaar zat is er gekeken naar de software kant van de Arduino en RaspberryPi. De code op de Arduino leek verkeerd te zijn. Met behulp van Arduino IDE
+                 is er geprobeerd om in te loggen op de Arduino om te kijken of die wel überhaupt wel metingen deed. Echter kwamen we de Arduino IDE niet binnen. Daarop heeft Jurjen Helmus iemand aangeraden 
+                 om mee te zitten, en met hem zijn we erachter gekomen dat het een IP-adres probleem was. We zijn namelijk aangesloten met een ethernet kabel, en hier sturen we de metingen doorheen. Het 
+                 bleek alleen dat we de Arduino geen IP-adres gaven om mee te verbinden. Dit kan gedaan worden met een code, maar dit moet automatisch gebeuren wanneer het gehele
+                 systeem opstart.
+                 ''')
+        
+    col13deca, col13decb = st.columns((0.2, 1.5))
+    with col13deca:
+        st.write('**13 december:**')
+    with col13decb:
+        st.write('''Er is hier geprobeerd om ervoor te zorgen dat de sensor automatisch een IP-adres meegeeft aan de ethernet kabel om de metingen binnen te krijgen. Dit is gelukt door de oude Arduino code een
+                 beetje aan te passen, en de geupdate versie mee up te loaden naar de Arduino. Hierdoor kunnen we bij het opstarten gelijk metingen binnen krijgen zonder eerst handmatig een lijn code mee te geven 
+                 (wat voor dagelijks gebruik vrij onhandig is). Ook is er gelijk voor gezorgd dat de metingen worden weggeschreven in een CSV bestand, wat wordt opgeslagen op de RaspberryPi zelf in plaats van 
+                 weggeschreven naar de server wat eerst het geval was.
+                 ''')
+    
+    col14deca, col14decb = st.columns((0.2, 1.5))
+    with col14deca:
+        st.write('**14 december:**')
+    with col14decb:
+        st.write('''De sensor is weer meegenomen naar Heemskerk om terug aan te sluiten op de Meltzer. Wat alleen bleek wanneer we probeerden metingen te verichten, is dat elke meting van de sensor verder weg dan
+                 79 millimeter niet correct werd geregistreerd. Dit lijkt echter alleen een probleem te zijn wanneer de sensor is aangesloten in de er speciaal voor gemaakte 3d-geprinte houder. Een probleem kan zijn
+                 (wat eerder ook is benoemd) dat de oogjes van de print te kijken zijn voor sensor, waardoor die een beetje gaat vervormen. Daarom moet dit gedeelte opnieuw ontwikkeld worden. Verder kan de code wel 
+                 een beetje verbeterd en opgeschoont worden, maar het lijkt op zichzelf erg goed te werken, ook als we de Meltzer aan het uit zetten. 
+                 ''')
         
   
     
