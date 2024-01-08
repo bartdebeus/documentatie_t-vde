@@ -30,7 +30,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **18 december 2023** om 10:11:52')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:39:31')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -463,10 +463,55 @@ if optie == 'Tijdlijn':
                  een beetje verbeterd en opgeschoont worden, maar het lijkt op zichzelf erg goed te werken, ook als we de Meltzer aan het uit zetten. 
                  ''')
         
-  
-    
-    
-    
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 6</h3>", unsafe_allow_html = True)  
+
+    col18deca, col18decb = st.columns((0.2, 1.5))
+    with col18deca:
+        st.write('**18 december:**')
+    with col18decb:
+        st.write('''Aangezien de houder van de sensor opnieuw geprint moet worden, zijn we terug gegaan naar de Hogeschool. Hier hebben we in het makerslab een expert
+                 ingeschakeld die ons op weg heeft geholpen met het proces van 3d-printen. Voor het ontwerp gebruiken we het programma Fusion 360. Eerst hebben we een schets gemaakt met de afmetingen om dit
+                 toe te passen in Fusion 360. Dit proces heeft gedurende de hele week plaatsgevonden. 
+                 ''')
+
+    col18dec_1, col18dec_2, col18dec_3 = st.columns((0.3, 0.3, 0.3))
+    with col18dec_1:
+        image = Image.open(f'18dec_1.jpg')
+        st.image(image, caption='Tips voor 3d-printen', width = 350)         
+    with col18dec_2:
+        image = Image.open(f'18dec_2.jpg')
+        st.image(image, caption='Schets', width = 350)           
+    with col18dec_3:
+        image = Image.open(f'18dec_3.JPG')
+        st.image(image, caption='Schets uitgewerkt in Fusion 360', width = 350)    
+
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Kerst</h3>", unsafe_allow_html = True)        
+
+    col25dec_1, col25dec_2 = st.columns((1, 1))
+    with col25dec_1:
+        st.write('''**Graag wensen we alle betrokkenen van het project Van der Eng // Techport een fijne kerst en alvast 
+                 een gelukkig nieuwjaar en de beste wensen!**
+                 ''') 
+    with col25dec_2:
+        image = Image.open(f'25dec_1.jpeg')
+        st.image(image, width = 350)  
+
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week7</h3>", unsafe_allow_html = True)         
+    col8jan_1, col8jan_2 = st.columns((0.2, 1.5))
+    with col8jan_1:
+        st.write('**8 januari:**')
+    with col8jan_2:
+        col8jana_2, col8janb_2 = st.columns((1, 0.3))
+        with col8jana_2:
+            st.write('''Na de vakantie zijn we weer samengekomen in Amsterdam. Hier hebben we het prototype uitgeprint voor de nieuwe houder. Deze is ontwikkeld
+                     in de kerstvakantie. Ook hier hebben we dezelfde expert ingeschakeld als degene die ons voor de vakantie op weg heeft geholpen. 
+                    ''')
+        with col8janb_2:
+            image1 = Image.open(f'8jan_1.jpg')
+            st.image(image1, caption = '3d-printen prototype')
     
     
 ##################################################################################################
