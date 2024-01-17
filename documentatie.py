@@ -30,7 +30,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:39:31')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:17:31')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -499,7 +499,8 @@ if optie == 'Tijdlijn':
         st.image(image, width = 350)  
 
     st.divider()
-    st.markdown("<h3 style='text-align: center;'>Week7</h3>", unsafe_allow_html = True)         
+    st.markdown("<h3 style='text-align: center;'>Week 7</h3>", unsafe_allow_html = True)  
+
     col8jan_1, col8jan_2 = st.columns((0.2, 1.5))
     with col8jan_1:
         st.write('**8 januari:**')
@@ -512,7 +513,48 @@ if optie == 'Tijdlijn':
         with col8janb_2:
             image1 = Image.open(f'8jan_1.jpg')
             st.image(image1, caption = '3d-printen prototype')
+        
+    col9jan_1, col9jan_2 = st.columns((0.2, 1.5))
+    with col9jan_1:
+        st.write('**9 januari:**')
+    with col9jan_2:
+        st.write('''We zijn langsgegaan in Heemskerk met de prototype van de houder. Deze is niet helemaal stabiel, dus zal later opnieuw uitgeprint moeten worden. Echter
+                 bleek dat helaas de Arduino foute metingen doorgaf. Toen we weer goede metingen binnenkregen vanaf de Arduino, was de connectie ertussen niet goed meer. Hiervoor kunnen we 11 januari
+                 weer langsgaan.
+                 ''')
     
+    col11jan_1, col11jan_2 = st.columns((0.2, 1.5))
+    with col11jan_1:
+        st.write('**11 januari:**')
+    with col11jan_2:
+        st.write('''We hebben weer geprobeerd de sensor te maken d.m.v. nieuwe code. Het lijkt wederom de connectie tussen de Arduino en RaspberryPi te zijn, die niet goed werkt.
+                 ''')
+    
+    col12jan_1, col12jan_2 = st.columns((0.2, 1.5))
+    with col12jan_1:
+        st.write('**12 januari:**')
+    with col12jan_2:
+        st.write('''Het is nog steeds niet gelukt de verbinding tussen de sensor te maken. Daarom is besloten het geheel mee terug te nemen naar Amsterdam.
+                 ''')
+        
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 8</h3>", unsafe_allow_html = True)      
+    
+    col15jan_1, col15jan_2 = st.columns((0.2, 1.5))
+    with col15jan_1:
+        st.write('**15 januari:**')
+    with col15jan_2:
+        st.write('''De laatste en goede versie van de sensorhouder is uitgeprint. In Amsterdam is het vanwege WiFi beperkingen niet gelukt om de verbinding te maken. Daarom is besloten om de sensor
+                 mee naar Bennebroek te nemen om op een thuisnetwerk het proberen te maken. Hier is alles opnieuw gedownload, gemaakt en ingesteld. De documentatie is geüpdatet en nu werkt alles wel.
+                 Het was helaas weer een probleem met de IP-adressen.
+                 ''')
+    
+    col16jan_1, col16jan_2 = st.columns((0.2, 1.5))
+    with col16jan_1:
+        st.write('**16 januari:**')
+    with col16jan_2:
+        st.write('''Er is weer afgesproken in Amsterdam. Hier zijn alle programmas geüpdatet en vernieuwd. Ook is er een nieuwe Arduinohouder gemaakt. Deze zal afzijn op 17 november.
+                 ''')
     
 ##################################################################################################
 ###Plan van Aanpak:
