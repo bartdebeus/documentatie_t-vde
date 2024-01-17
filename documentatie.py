@@ -30,7 +30,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:17:31')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **17 januari 2024** om 09:01:58')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
