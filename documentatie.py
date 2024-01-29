@@ -115,7 +115,8 @@ if optie == 'Algemene Informatie':
              De verschillende tabbladen met informatie zijn het Plan van Aanpak, met de opdrachtbeschrijving. 
              Ook is er een tijdlijn met wat er redelijk per dag is gebeurd. Ook is er een overig tab. Hierin staan
              zowel verschillende referenties als uitleg van bepaalde termen.\n
-             Deze website werkt het beste op de webbrowser FireFox.
+             **Deze website werkt het beste op de webbrowser FireFox, indien een andere browser wordt gebruikt zijn er problemen
+             met het displayen van de PDF files.**
              ''')
     st.divider()
              
