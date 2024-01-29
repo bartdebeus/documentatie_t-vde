@@ -31,7 +31,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Documentatie Sensor', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:17:31')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **27 januari 2024** om 13:45:33')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -97,7 +97,8 @@ if optie == 'Algemene Informatie':
              Andre Gerver en Hamza Arrahmani, en onze begeleider Jurjen Helmus. \n
              De verschillende tabbladen met informatie zijn het Plan van Aanpak, met de opdrachtbeschrijving. 
              Ook is er een tijdlijn met wat er redelijk per dag is gebeurd. Ook is er een overig tab. Hierin staan
-             zowel verschillende referenties als uitleg van bepaalde termen.
+             zowel verschillende referenties als uitleg van bepaalde termen.\n
+             Deze website werkt het beste op de webbrowser FireFox.
              ''')
     st.divider()
              
