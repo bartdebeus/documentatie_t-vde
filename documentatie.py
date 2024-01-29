@@ -10,6 +10,7 @@ Created on Tue Nov 14 12:40:44 2023
 ##################################################################################################
 
 import streamlit as st
+import base64
 from PIL import Image
 
 ##################################################################################################
@@ -27,10 +28,10 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title =
 
 
 st.sidebar.subheader('**Opties**')
-optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
+optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Documentatie Sensor', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **27 januari 2024** om 12:45:34')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **8 januari 2024** om 11:17:31')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -63,6 +64,22 @@ if optie == 'Overig':
                  met een ethernet kabel op de RaspberryPi om daar de data naartoe te sturen. Voor meer info, zie https://www.arduino.cc/.
                  ''')
 
+
+##################################################################################################
+###Documentatie sensor.
+##################################################################################################
+        
+def displayPDF(file):
+    # Opening file from file path
+    with open(file, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    # Embedding PDF in HTML
+    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    # Displaying File
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
+if optie == 'Documentatie Sensor':
+    displayPDF(f'DocumentatieV2.pdf')
 
 ##################################################################################################
 ###Wat is de opdracht.
