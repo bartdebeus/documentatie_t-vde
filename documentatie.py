@@ -69,17 +69,34 @@ if optie == 'Overig':
 ###Documentatie sensor.
 ##################################################################################################
         
-def displayPDF(file):
+def displayPDFword(file):
     # Opening file from file path
     with open(file, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
     # Embedding PDF in HTML
-    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1000" height="1000" type="application/pdf"></iframe>'
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
+def displayPDFpowerpoint(file):
+    # Opening file from file path
+    with open(file, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    # Embedding PDF in HTML
+    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1400" height="1000" type="application/pdf"></iframe>'
+    # Displaying File
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
+
+
 if optie == 'Documentatie Sensor':
-    displayPDF(f'DocumentatieV2.pdf')
+    st.markdown("<h1 style='text-align: center;'>Documentatie Sensor</h1>", unsafe_allow_html = True)  
+    st.write('''Vanuit de vorige groep is er documentatie meegegeven om de sensor te reproduceren. Echter is snel gemerkt dat deze documentatie onvolledig is, en daarnaast
+             gedateerd. Daarom is besloten om een hele nieuwe documentatie te maken voor de sensor. Hierbij is de hele sensor opnieuw ingsteld met de onderstaande stappen, om te
+             kijken of de documentatie wel helemaal volledig is. Alleen de stappen om de sensor zelf te bouwen zijn niet nagelopen. Dit is dus de tweede versie.
+             ''')
+    st.divider()
+    displayPDFword(f'DocumentatieV2.pdf')
 
 ##################################################################################################
 ###Wat is de opdracht.
@@ -641,84 +658,4 @@ if optie == 'Plan van Aanpak':
              gekomen.
              ''')
     st.divider()
-
-    pva1, pva2 = st.columns((0.5, 0.5))
-    with pva1:
-        image2 = Image.open(f'PvA14.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA3.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA5.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA7.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA9.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA11.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA13.png')
-        st.image(image2, width = 500)
- 
-    with pva2:
-        image2 = Image.open(f'PvA2.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA4.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA6.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA8.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA10.png')
-        st.image(image2, width = 500)
-        st.divider()
-        
-        image2 = Image.open(f'PvA12.png')
-        st.image(image2, width = 500)
-        st.divider()        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
+    displayPDFpowerpoint(f'pva_techport_vde.pdf')
