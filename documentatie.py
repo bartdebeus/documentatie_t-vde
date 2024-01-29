@@ -30,7 +30,7 @@ st.sidebar.subheader('**Opties**')
 optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
-st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **17 januari 2024** om 09:01:58')
+st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **27 januari 2024** om 12:45:34')
 
 if optie == 'Overig':
     st.subheader('**Referenties**')
@@ -555,7 +555,63 @@ if optie == 'Tijdlijn':
     with col16jan_2:
         st.write('''Er is weer afgesproken in Amsterdam. Hier zijn alle programmas geüpdatet en vernieuwd. Ook is er een nieuwe Arduinohouder gemaakt. Deze zal afzijn op 17 november.
                  ''')
+        
+    col18jan_1, col18jan_2 = st.columns((0.2, 1.5))
+    with col18jan_1:
+        st.write('**18 januari:**')
+    with col18jan_2:
+        st.write('''We zijn weer langsgegaan met de vernieuwde software. Ditmaal werkt alles wel, de sensor slaat de data op op de RaspberryPi. Een probleem is dat wanneer de sensor weer wordt verbonden met
+                 de WiFi bij Van der Eng, dat deze geen data meer wegschrijft, ook al is het binnen de RaspberryPi. Daarvoor is een afspraak met Patrick Groot ingepland, die het netwerkbeheer bij Van der Eng
+                 regelt.
+                 ''')
     
+    col19jan_1, col19jan_2 = st.columns((0.2, 1.5))
+    with col19jan_1:
+        st.write('**19 januari:**')
+    with col19jan_2:
+        st.write('''De documentatie voor het instellen van alle software is gefinaliseerd. Deze is vrij erg veranderd t.o.v. het vorige groepje, en hiermee zou het makkelijker moeten zijn om in het vervolg de 
+                 sensor na te bouwen en in te stellen.
+                 ''')
+
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 9</h3>", unsafe_allow_html = True) 
+
+    col22jan_1, col22jan_2 = st.columns((0.2, 1.5))
+    with col22jan_1:
+        st.write('**22 januari:**')
+    with col22jan_2:
+        st.write('''De weer opnieuw ingestelde sensor, deze keer niet aangesloten op het WiFi netwerk van Van der Eng, is weer neergezet op locatie. Weer wordt de data gewoon weggeschreven op de RaspberryPi zelf,
+                 hiervan is alleen de datum niet correct, omdat deze dus niet is aangesloten op de WiFi. Hiervoor staat een afspraak op 23 januari met Patrick Groot.
+                 ''')
+        
+    col23jan_1, col23jan_2 = st.columns((0.2, 1.5))
+    with col23jan_1:
+        st.write('**23 januari:**')
+    with col23jan_2:
+        st.write('''De afpsraak met Patrick was een succes, de RaspberryPi heeft een vast IP-adres meegekregen (192.168.16.46), waardoor er geen problemen meer zijn met de connecties tussen de systemen en het WiFi netwerk.
+                 Hierdoor heeft alle data de goede datum, en kan er ook gewerkt worden naar de data wegschrijven naar de server. Er is afgesproken om op 26 januari weer langs te gaan, om dan te kijken of de data een beetje kloppend
+                 is en allemaal op de RaspberryPi is weggeschreven.
+                 ''')
+        
+    col26jan_1, col26jan_2 = st.columns((0.2, 1.5))
+    with col26jan_1:
+        st.write('**26 januari:**')
+    with col26jan_2:
+        st.write('''De data van 24, 25 en 26 januari staan op de RaspberryPi. Deze data is toch niet helemaal wat wij zochten in frequentie, dus er zijn een paar kleine aanpassingen gemaakt in de software. Deze
+                 data is opgeslagen voor ons om te analyseren en kijken of we hier al wat mee kunnen. Om de data weg te schrijven naar de server is er wel nog een afspraak met Patrick nodig, omtrent de permissies.
+                 ''')
+
+    st.divider()
+    st.markdown("<h3 style='text-align: center;'>Week 10</h3>", unsafe_allow_html = True) 
+    
+    col29jan_1, col29jan_2 = st.columns((0.2, 1.5))
+    with col29jan_1:
+        st.write('**29 januari:**')
+    with col29jan_2:
+        st.write('''**Ingepland:** de eindpresentatie op de Hogeschool van Amsterdam.
+                 ''')
+
+
 ##################################################################################################
 ###Plan van Aanpak:
 ##################################################################################################         
