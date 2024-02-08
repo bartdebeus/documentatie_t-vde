@@ -28,7 +28,7 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded", page_title =
 
 
 st.sidebar.subheader('**Opties**')
-optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Tijdlijn', 'Plan van Aanpak', 'Documentatie Sensor', 'Overig'))
+optie = st.sidebar.selectbox('Kies een optie voor documentatie:', ('Algemene Informatie', 'Voor de volgende groep', 'Tijdlijn', 'Plan van Aanpak', 'Documentatie Sensor', 'Overig'))
 st.sidebar.divider()
 st.sidebar.subheader('Laatste update')
 st.sidebar.write('De laatste update van deze pagina is uitgevoerd op **27 januari 2024** om 13:45:33')
@@ -64,6 +64,47 @@ if optie == 'Overig':
                  met een ethernet kabel op de RaspberryPi om daar de data naartoe te sturen. Voor meer info, zie https://www.arduino.cc/.
                  ''')
 
+
+##################################################################################################
+###Voor de volgende groep.
+##################################################################################################
+
+if optie == 'Voor de volgende groep':
+    st.markdown("<h1 style='text-align: center;'>Voor de volgende groep</h1>", unsafe_allow_html = True)  
+    st.write('''Het blok is afgerond, dus ons werk aan de sensor is voorbij. In deze kolom zullen we jullie op weg proberen helpen, en wie jullie moeten 
+             contacteren.
+             ''')
+    
+    st.subheader('Hoe te beginnen.')
+    st.write('''Ons project begon in het maintenance lab op de 4e etage, met als begeleider Jurjen Helmus en Inge Killian. Wij kregen gelijk de contactgegevens van 
+             André Gerver (a.gerver@techport.nl). Hij was (en hopelijk is) de contactpersoon van Techport. Hij zette ons in contact met VanderEng. Bij ons was de contactpersoon
+             Hamza Arrahmani. Hij is helaas gestopt, dus wij weten niet zeker met wie ze jullie in contact zullen brengen. Probeer, met de nieuwe contactgegevens, direct VanderEng
+             te bellen, en een afspraak te maken. Dit kan mogelijk met Ernst de Haas (directeur van VanderEng). Hun adres is Lijnbaan 45 te Heemskerk.
+            ''')
+    
+    st.write('''Indien jullie het fijn vinden kan er ook een afspraak met ons gemaakt worden. Dat hebben wij ook gedaan met onze voorgangers, dit kan het op weg helpen
+             mogelijk net wat meer verduidelijken. 
+             ''')
+    
+    st.subheader('Wat te doen.')
+    st.write('''**Valideer de data:** Probeer gelijk de data te valideren. Wij hebben dit gedaan, de data lijkt correct te zijn. Mogelijk moet echter de Ultrasoon sensor
+             vervangen worden, staat de houder niet meer goed gerecht, of is er iets anders aan de hand. Check dit m.b.v. de VNC-viewer, of een tablet met toetsenbord zoals uitgelegd
+             in de documentatie.
+             ''')
+    
+    st.write('''**3d-printen:** Wij hebben een print nog niet kunnen inplementeren bij VanderEng. Dat is de Arduino Behuizing V9. Loop gewoon het makerslab in op de begane grond. Jullie kunnen
+             dit hier uitprinten en dan kunnen jullie al een beetje aan de slag gaan met het 3d-printen. Als jullie namelijk in het vervolg meer sensoren moeten maken (wat wel de bedoeling is), hebben
+             jullie dit ook nodig. Onze 3d-prints zijn ontwikkeld in Fusion360, hiervoor kunnen jullie een gratis studentenlicentie aanvragen. Probeer m.b.v. tutorials op YouTube dit te leren. De tutorial die ik
+             heb gebruikt is https://www.youtube.com/watch?v=9Jgty4QDtss&t=155s. 
+             ''')
+    
+    st.write('''**Upgraden sensor:** Wij zijn heel lang bezig geweest met het herstellen en repareren v/d sensor. Hierdoor hebben wij niet kunnen kijken naar upgrades. De sensor kan namelijk
+             ook via de WiFi werken, terwijl wij nu bezig zijn geweest met de Ethernet kabel. Het voordeel van de WiFi connecties zou kunnen zijn dat je er een website van zou kunnen maken via één 
+             RaspberryPi, i.p.v. via de VNC-viewer elke keer. 
+             ''')
+    
+    st.write('''
+             ''')
 
 ##################################################################################################
 ###Documentatie sensor.
